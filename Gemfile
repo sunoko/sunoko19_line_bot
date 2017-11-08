@@ -16,6 +16,12 @@ gem 'jbuilder', '~> 2.5'
 # Twitter API
 gem 'twitter'
 
+# LINE API
+gem 'line-bot-api'
+
+# for secret token
+gem 'figaro'
+
 group :production do
   # for heroku
   gem 'rails_12factor'
