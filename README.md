@@ -1,24 +1,17 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# LINE BOT
+## LINE API
+## Twitter API
+```rb
+# プロジェクト作成
+rails new .
+# TweetsControllerコントローラー作成
+rails g controller tweets search
+# Tweetモデル作成
+rails g model Tweet
+# application.ymlの内容をherokuの環境変数に反映
+figaro heroku:set -e production
+```
+### http://localhost:3000/tweets/search
+![](public/img/tweet_search.png)
+### 検索結果
+![](public/img/tweet_result.png)
