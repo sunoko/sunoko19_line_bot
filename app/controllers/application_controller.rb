@@ -14,4 +14,9 @@ class ApplicationController < ActionController::Base
     hash = OpenSSL::HMAC::digest(OpenSSL::Digest::SHA256.new, ENV['LINE_CHANNEL_SECRET'], http_request_body)
     Base64.strict_encode64(hash)
   end
+  def signature_answer_builder
+    http_request_body = request.raw_post
+    hash = OpenSSL::HMAC::digest(OpenSSL::Digest::SHA256.new, ENV['LINE_CHANNEL_SECRET'], http_request_body)
+    Base64.strict_encode64(hash)
+  end
 end
