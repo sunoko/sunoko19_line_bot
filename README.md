@@ -1,4 +1,6 @@
 # LINE BOT
+# LINE BOT
+# LINE BOT
 ## LINE API
 ## Twitter API
 ```rb
